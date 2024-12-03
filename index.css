@@ -15,3 +15,11 @@ body {
     position: absolute;
     cursor: grab;
 }
+#container{
+    top: 10px;
+    padding: 82px;
+    margin: auto;
+    width: 450px;
+    background-color: white;
+    position: relative;
+}
