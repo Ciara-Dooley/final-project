@@ -1,36 +1,40 @@
-const character = document.getElementById('character');
+let saveEl = document.getElementById("save-el")
+let countEl = document.getElementById("count-el")
+let count = 0
 
-let offsetX, offsetY;
-let isDragging = false;
+function increment() {
+   count += 1
+  countEl.textContent = count
+}
 
-character.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    offsetX = e.clientX - character.getBoundingClientRect().left;
-    offsetY = e.clientY - character.getBoundingClientRect().top;
-    character.style.cursor = 'grabbing';
-});
+function save() {
+    let countStr = count + " - "
+    saveEl.textContent += countStr
+    countEl.textContent = 0
+    count = 0
+}
 
-document.addEventListener('mousemove', (e) => {
-    if (isDragging) {
-        character.style.left = `${e.clientX - offsetX}px`;
-        character.style.top = `${e.clientY - offsetY}px`;
+    function myFunction() {
+        
+        document.getElementById("demo").innerHTML = "next";
+
+    
+   
     }
-});
+  //  HTML
 
-document.addEventListener('mouseup', () => {
-    isDragging = false;
-    character.style.cursor = 'grab';
-});
-var buttons = document.getElementsById("container");
-
-button.onclick = onbuttonclicked;
-
-function onbuttonclicked(){
-    if (onbuttonclicked) {
-        button1.style.backgroundColor = "red";
-        button1.disabled=true;
-    } else {
-        button1.style.backgroundColor = "green";
-        button1.disabled=false;
-      }
-    }
+//<!DOCTYPE html>
+//<html>
+//<head>
+  //  <title>Display Text on Button Click</title>
+//    <script type="text/javascript">
+  //      function displayText() {
+    //        document.getElementById("text").style.display = "block";
+      //  }
+//    </script>
+//</head>
+//<body>/
+    <button onclick="displayText()">Click me</button>
+    <p id="text" style="display:none;">Hello, this is the text displayed after clicking the button!</p>
+//</body>
+//</html>
