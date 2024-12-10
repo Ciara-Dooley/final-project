@@ -15,6 +15,7 @@ function save() {
     countEl.textContent = 0
     count = 0
 }
+
     //new part in particlar the part about //
     const questions = [
                    "chose an emojie with a smile?",
@@ -23,18 +24,27 @@ function save() {
                     "chose an emojie with a monkey?",
                     "chose an emojie with hearts?"
                 ];
-       
                 let currentQuestionIndex = 0;
                 let questionInterval;
-       
                 document.getElementById('showQuestionButton').addEventListener('click', function() {
                     showQuestion();
-                    questionInterval = setInterval(changeQuestion, 15000);
+                    questionInterval = setInterval(changeQuestion, 10);
                 });
                 function showQuestion() {
                     document.getElementById('question').innerText = questions[currentQuestionIndex];
                 }
                 function changeQuestion() {
-                    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+                    currentQuestionIndex = (currentQuestionIndex + .01) % questions.length;
                     showQuestion();
                 }
+//NEW PART//
+let perfect = document.getElementById("perfect")
+
+
+ if (countEl == 50){
+  document.getElementById("perfect").style.display = "block";
+ }
+ else{
+  document.getElementById("perfect").style.display = "none";
+ }
+
