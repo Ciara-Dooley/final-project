@@ -48,8 +48,6 @@ function changeQuestion() {
   showQuestion();
 }
 
-
-
 //NEW PART//
 
 let perfectscore = document.getElementById("perfectscore")
@@ -62,4 +60,4 @@ function checkPerfectScore(){
     perfectscore.hidden = true;
   }
 }
-
+//setting page.html ?????//
