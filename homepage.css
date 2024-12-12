@@ -1,0 +1,55 @@
+.things{
+    text-decoration:underline;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: plum;
+    font-size: 30px;
+}
+h1{
+    font-size:50px;
+    color:lavender;
+    padding: 10px;
+    border-style:double ;
+    border-radius: 10px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: plum;
+
+    
+}
+body{
+    background-color:whitesmoke ;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+}
+p{
+    color: lavender;
+}
+.heading{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   grid-column: 2 / 2;
+   grid-row: 1/1;
+}
+
+.left-emojis {
+    grid-column: 1 / 1;
+    grid-row: 1/1;
+}
+
+.right-emojis {
+    grid-column: 3 / 3;
+    grid-row: 1/1;
+}
+
+.class > h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+
+}
+h2{
+    font-size: 40px;
+
+}
